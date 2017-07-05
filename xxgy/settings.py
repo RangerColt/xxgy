@@ -37,8 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_summernote',
     'home',
     'active',
+    'enroll',
+    'news',
+    'introduce',
 ]
 
 MIDDLEWARE = [
@@ -101,6 +105,12 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# django_summernote
+SUMMERNOTE_CONFIG = {
+    'iframe': True,
+    'airMode': False,
+}
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
@@ -122,3 +132,15 @@ USE_TZ = True
 #STATICFIELS_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+STATICFIELS_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+    '/var/www/static/',
+]
+
+STATICFILES_FINDERS = (
+    "django.contrib.staticfiles.finders.FileSystemFinder",
+    "django.contrib.staticfiles.finders.AppDirectoriesFinder"
+)

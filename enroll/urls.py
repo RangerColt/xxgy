@@ -5,6 +5,5 @@ from django.conf.urls import url, include
 from views import *
 
 urlpatterns = [
-    url(r'^active/$', index, name='active_index'),
-    url(r'^active/details/$', details, name='active_details'),
+    url(r'^enroll/$', index, name='enroll_index'),
 ]

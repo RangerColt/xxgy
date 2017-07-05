@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="container">
-	<div class="row row-offcanvas row-offcanvas-right">
+	<div class="row">
 		<div class="col-md-2">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					active
+					enroll
 				</div>
 				<ul class="list-group">
 					<li class="list-group-item">111</li>
@@ -16,16 +16,16 @@
 		</div>
 		<div class="col-md-10">
 			<ol class="breadcrumb">
-				<li><a href="{% url 'index' %}">主页</a></li>
-				<li class="active">公益活动</li>
+				<li><a href="#">Home</a></li>
+				<li class="active">enroll</li>
 			</ol>
 			<ul class="list-group">
-			    {% for article in articles %}
 				<li class="list-group-item">
-					<a href="{% url 'active_details' %}?id={{ article.id }}">{{ article.title }}</a>
-					<span class="badge">{{ article.created }}</span>
+					<a href="#">1111111111</a>
+					<span class="badge">2017-06-12</span>
 				</li>
-			    {% endfor %}
+				<li class="list-group-item">2222222222</li>
+				<li class="list-group-item">3333333333</li>
 			</ul>
 		</div>
 	</div>
