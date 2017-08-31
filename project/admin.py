@@ -11,7 +11,7 @@ class ProjectAdmin(SummernoteModelAdmin):
     list_per_page = 10
 
 class ArticleAdmin(SummernoteModelAdmin):
-    list_display = ('title', 'author', 'create')
+    list_display = ('title', 'pro_type', 'author', 'create')
     list_per_page = 10
 
 admin.site.register(Article, ArticleAdmin)

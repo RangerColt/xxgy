@@ -25,6 +25,8 @@ class Article(models.Model):
     update = models.DateTimeField(u'更新日期', auto_now=True)
     content = models.TextField(u'内容')
 
+    pro_type = models.ForeignKey(Project, default='2')
+
     class Meta:
         verbose_name_plural = u'文章'
 
