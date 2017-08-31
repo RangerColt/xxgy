@@ -25,7 +25,9 @@ SECRET_KEY = 'bv^79m-i=ot!h6b_q5k83vf4--2dqngg8(0!z2^b5kkegi-t3u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["357362.ichengyun.net"]
+ALLOWED_HOSTS = ["357362.ichengyun.net",
+                 "127.0.0.1",
+                ]
 
 
 # Application definition
@@ -39,11 +41,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_summernote',
     'home',
-    'news',
-	'content',
+    'project',
 ]
 
-MIDDLEWARE = [
+MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
