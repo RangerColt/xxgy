@@ -21,8 +21,8 @@ class Article(models.Model):
     id = models.AutoField(primary_key=True)
     title = models.CharField(u'标题', max_length=128)
     author = models.CharField(u'作者', max_length=16)
-    create = models.DateTimeField(u'创建日期', auto_now=True)
-    update = models.DateTimeField(u'更新日期', auto_now=True)
+    create = models.DateTimeField(u'创建日期')
+    update = models.DateTimeField(u'更新日期')
     content = models.TextField(u'内容')
 
     pro_type = models.ForeignKey(Project, default='2')

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+    <div class="col-md-12" id="top-line"></div>
+    <div style="margin-top: 15px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 page-sidebar">
+                    <div class="news-sidebar">
+                        <span class="news-text">综合新闻</span>
+                    </div>
+                    <ul class="news-list">
+                        <li>
+                            {% include 'project/security/nav.html' %}
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-10">
+                    <ol class="breadcrumb breadcrumb-title">
+                        <li><a href="{% url 'index' %}">首页</a></li>
+                        <li><a href="{% url 'security' %}">新闻热点</a></li>
+                        <li class="active">综合新闻</li>
+                    </ol>
+                    <div class="news-content">
+                        <ul>
+                            {% for active in actives %}
+                                <li>
+                                    <a href="#">{{ active.title }}</a>
+                                    <span class="pull-right">{{ active.create }}</span>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
