@@ -26,7 +26,6 @@ SECRET_KEY = 'bv^79m-i=ot!h6b_q5k83vf4--2dqngg8(0!z2^b5kkegi-t3u'
 DEBUG = True
 
 ALLOWED_HOSTS = ["357362.ichengyun.net",
-                 "127.0.0.1",
                 ]
 
 
@@ -44,7 +43,7 @@ INSTALLED_APPS = [
     'project',
 ]
 
-MIDDLEWARE_CLASSES = [
+MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
