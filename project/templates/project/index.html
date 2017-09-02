@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+    <div class="col-md-12" id="top-line"></div>
+    <div style="margin-top: 15px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 page-sidebar">
+					<div class="panel panel-info">
+						<div class="panel-heading">
+							公益项目
+						</div>
+						<ul class="list-group">
+							<li class="list-group-item"><a href="{% url 'project_index' t=1 %}">公益图书馆</a></li>
+							<li class="list-group-item"><a href="{% url 'project_index' t=2 %}">阅读推广</a></li>
+							<li class="list-group-item"><a href="{% url 'project_index' t=3 %}">扶贫助学</a></li>
+							<li class="list-group-item"><a href="{% url 'project_index' t=4 %}">儿童安全教育</a></li>
+							<li class="list-group-item"><a href="{% url 'project_index' t=5 %}">女童生理卫生</a></li>
+						</ul>
+					</div>
+                </div>
+                <div class="col-md-10">
+                    <ol class="breadcrumb breadcrumb-title">
+						<li><a href="{% url 'index' %}">首页</a></li>
+						<li><a href="{% url 'project_index' t=0 %}">公益项目</a></li>
+                    </ol>
+                    <div>
+                        <ul class="list-group">
+                            {% for article in articles %}
+							<a href="{% url 'project_details' tid=article.id %}" class="list-group-item">
+										{{ article.title }}
+										<span class="badge">{{ article.create }}</span>
+									</a>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

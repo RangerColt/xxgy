@@ -3,9 +3,14 @@ from .models import Article
 
 # Create your views here.
 
-def security(request):
-    articles = Article.objects.filter(pro_type__exact='2')
-    context = {'articles': articles}
-   
-    return render(request, 'project/security.html', context)
+def index(request, t):
+    if t == u'0':
+        articles = Article.objects.all()
+    elif t != u'0':
+        articles = Article.objects.filter(type=t)
+    return render(request, 'project/index.html', {'articles':articles})
 
+
+def details(request, tid):
+    article = Article.objects.get(id=tid)
+    return render(request, 'project/detail.html', {'article':article})
