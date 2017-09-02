@@ -16,9 +16,14 @@
 <script src="offcanvas.js"></script>
 <script type="text/javascript">
   $(document).ready(function () {
+	$("li.dropdown").mouseover(function() {
+		$(this).addClass('open');
+	});
+	$("li.dropdown").mouseout(function() {
+		$(this).removeClass('open');
+	});
   })
 </script>
-{% block add_js %} {% endblock %} 
 {% include 'footer.html' %}
 
 </html>
