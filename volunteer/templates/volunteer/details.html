@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <div class="col-md-12" id="top-line"></div>
+    <div style="margin-top: 15px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 page-sidebar">
+					<div class="panel panel-info">
+						<div class="panel-heading">
+							志愿者
+						</div>
+						<ul class="list-group">
+							<li class="list-group-item"><a href="{% url 'volunteer_index' t=1 %}">志愿者风采</a></li>
+							<li class="list-group-item"><a href="{% url 'volunteer_index' t=2 %}">志愿者招募</a></li>
+							<li class="list-group-item"><a href="{% url 'volunteer_index' t=3 %}">公益大使</a></li>
+						</ul>
+					</div>
+                </div>
+                <div class="col-md-10">
+                    <ol class="breadcrumb breadcrumb-title">
+						<li><a href="{% url 'index' %}">首页</a></li>
+						<li><a href="{% url 'volunteer_index' t=0 %}">志愿者</a></li>
+                    </ol>
+                    <div>
+						<h3>{{ article.title }}</h3>
+						<p class="text-right">作者:{{ article.author }}&nbsp;&nbsp;发布时间:{{ article.create|date }}</p>
+						<br>
+						{{ article.content|safe }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

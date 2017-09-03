@@ -21,5 +21,5 @@ class Article(models.Model):
 
 
     class Meta:
-        verbose_name_plural = u'文章'
+        verbose_name_plural = u'公益项目'
 
