@@ -11,8 +11,8 @@
       </p>
       <div class="jumbotron" style="background:url('{% static 'home/bg1.jpg' %}'); height: 400px;">
         <h1 style="color: white">新星公益</h1>
-        <p style="color: white">放置宣传标语类文字</p>
-        <p style="color: white">背景可换作照片</p>
+        <p style="color: white">传递温暖，关爱儿童</p>
+        <p style="color: white">用我们的双手，点亮这个世界</p>
       </div>
     </div>
     <!--/.col-xs-12.col-sm-9-->
@@ -24,11 +24,11 @@
     <div class="col-sm-6">
       <ul class="list-group">
         <li class="list-group-item list-group-item-info">
-          活动纪实
+			信息公开
         </li>
-        {% for article in articles %}
+        {% for article in aas %}
         <li class="list-group-item">
-          <a href="{% url 'active_details' %}?id={{ article.id }}">
+          <a href="{% url 'information_details' tid=article.id %}">
             {{ article.title }}
           </a>
         </li>
@@ -38,11 +38,11 @@
     <div class="col-sm-6">
       <ul class="list-group">
         <li class="list-group-item list-group-item-success">
-          活动纪实
+			阅读推广
         </li>
-        {% for article in articles %}
+        {% for article in bbs %}
         <li class="list-group-item">
-          <a href="{% url 'active_details' %}?id={{ article.id }}">
+          <a href="{% url 'project_details' tid=article.id %}">
             {{ article.title }}
           </a>
         </li>
@@ -54,11 +54,11 @@
     <div class="col-sm-6">
       <ul class="list-group">
         <li class="list-group-item list-group-item-warning">
-          活动纪实
+			扶贫助学
         </li>
-        {% for article in articles %}
+        {% for article in ccs %}
         <li class="list-group-item">
-          <a href="{% url 'active_details' %}?id={{ article.id }}">
+          <a href="{% url 'project_details' tid=article.id %}">
             {{ article.title }}
           </a>
         </li>
@@ -68,11 +68,11 @@
     <div class="col-sm-6">
       <ul class="list-group">
         <li class="list-group-item list-group-item-danger">
-          活动纪实
+			志愿者
         </li>
-        {% for article in articles %}
+        {% for article in dds %}
         <li class="list-group-item">
-          <a href="{% url 'active_details' %}?id={{ article.id }}">
+          <a href="{% url 'volunteer_details' vid=article.id %}">
             {{ article.title }}
           </a>
         </li>
