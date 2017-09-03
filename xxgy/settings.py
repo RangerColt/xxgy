@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'home',
     'project',
     'volunteer',
+    'information',
 ]
 
 MIDDLEWARE = [

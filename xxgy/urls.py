@@ -23,5 +23,6 @@ urlpatterns = [
     url(r'^summernote/', include('django_summernote.urls')),
     url(r'', include('home.urls')),
     url(r'', include('project.urls')),
-    url(r'', include('volunteer.urls'))
+    url(r'', include('volunteer.urls')),
+    url(r'', include('information.urls'))
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
